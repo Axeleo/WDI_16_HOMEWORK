@@ -8,4 +8,5 @@ var favouriteMovie = {
 function getMovieDetails(object) {
   console.log(object.title + ' lasts for ' + object.duration + ' and stars ' + object.starring.join(', '))
 }
+// Invoke fucntion
 getMovieDetails(favouriteMovie)
