@@ -9,6 +9,13 @@ var sandringham = ['Southern Cross', 'Richmond', 'South Yarra', 'Parahn', 'Winds
 var startStation = prompt('PLEASE SELECT YOUR ORIGIN: Flinders, Richmond, East Richmond, Burnley, Hawthorn, Glenferrie, Flagstaff, Central, Parliment, Richmond, Kooyong, Tooronga, Southern Cross, Richmond, South Yarra, Parahn, Windsor')
 var endStation = prompt('SELECT YOUR DESTINATION: Flinders, Richmond, East Richmond, Burnley, Hawthorn, Glenferrie, Flagstaff, Central, Parliment, Richmond, Kooyong, Tooronga, Southern Cross, Richmond, South Yarra, Parahn, Windsor')
 
+// define variables
+var journey = []
+var startJourney 
+var endJourney 
+var startLine
+var endLine
+
 // create a function to find the index number of a station for start and end
 function findOrigin(element) {
   if (element === startStation){
@@ -29,13 +36,6 @@ function findRichmond(element) {
   }
 }
 
-// define variables
-var journey = []
-var startJourney 
-var endJourney 
-var startLine
-var endLine
-
 // search arrays for the origin and grab that array
 // need to add two lines to prompt another response in case the user doesn't enter correct info
 function originIndexFinder() {
@@ -46,9 +46,12 @@ function originIndexFinder() {
   } else if (glenwaverly.findIndex(findOrigin) != -1){
     startJourney = glenwaverly.findIndex(findOrigin)
     startLine = glenwaverly
-  } else {
+  } else  if (sandringham.findIndex(findOrigin) != -1){
     startJourney = sandringham.findIndex(findOrigin)
     startLine = sandringham
+  } else {
+    startStation = prompt('PLEASE SELECT YOUR ORIGIN: Flinders, Richmond, East Richmond, Burnley, Hawthorn, Glenferrie, Flagstaff, Central, Parliment, Richmond, Kooyong, Tooronga, Southern Cross, Richmond, South Yarra, Parahn, Windsor')
+    originIndexFinder();
   }
 
   // search arrays for destination and grab that value
@@ -58,10 +61,13 @@ function originIndexFinder() {
   } else if (glenwaverly.findIndex(findDestination) != -1) {
     endJourney = glenwaverly.findIndex(findDestination)
     endLine = glenwaverly
-  } else {
+  } else if (sandringham.findIndex(findDestination) != 1){
     endJourney = sandringham.findIndex(findDestination)
     endLine = sandringham
-  } 
+  } else {
+    endStation = prompt('SELECT YOUR DESTINATION: Flinders, Richmond, East Richmond, Burnley, Hawthorn, Glenferrie, Flagstaff, Central, Parliment, Richmond, Kooyong, Tooronga, Southern Cross, Richmond, South Yarra, Parahn, Windsor')
+    originIndexFinder();
+  }
 }
 
 
