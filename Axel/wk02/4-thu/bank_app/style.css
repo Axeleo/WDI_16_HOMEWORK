@@ -1,0 +1,122 @@
+  * {
+  box-sizing: border-box;
+}
+.wrapper{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+header {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  margin: 20px auto;
+}
+h1 {
+  font-family: 'Righteous', cursive;
+  font-size: 2.5em;
+  text-align:  center;
+  display: inline-block;
+}
+h1 span{
+  color: #3066BE;
+}
+.logo {
+  height: 100%;
+  display: inline-block;
+}
+.checkings-account {
+  font-family: 'Quicksand',
+  sans-serif;
+  background-color: #28C2FF;
+  width:30%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10%;
+  padding: 1em;
+  align-items: center;
+  color: white;
+}
+.checkings-account span {
+  padding: 5px;
+}
+.checkings-account h3 {
+  border-bottom: 1px solid white;
+  margin: 8px 0;
+}
+.checkings-input{
+  margin: 8px;
+}
+.checkings-btns{
+  display: flex;
+  justify-content: center;
+}
+.checkings-display {
+  font-size: 1.5em;
+}
+.checkings-withdraw-btn {
+  font-family: 'Quicksand',
+  sans-serif;
+  border-right: 0.1rem solid grey;
+  border-bottom: 0.1rem solid grey;
+  margin: 5px;
+  background-color: white;
+}
+.checkings-deposit-btn {
+  font-family: 'Quicksand',
+  sans-serif;
+  border-right: 0.1rem solid grey;
+  border-bottom: 0.1rem solid grey;
+  margin: 5px;
+  background-color: white;
+}
+.savings-account {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #3066BE;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10%;
+  padding: 1em;
+  align-items: center;
+  color: white;
+}
+
+.savings-account span {
+  padding: 5px;
+}
+
+.savings-account h3 {
+  border-bottom: 1px solid white;
+  margin: 8px 0;
+}
+
+.savings-input {
+  margin: 8px;
+}
+
+.savings-btns {
+  display: flex;
+  justify-content: center;
+}
+
+.savings-display {
+  font-size: 1.5em;
+}
+
+.savings-withdraw-btn {
+  font-family: 'Quicksand', sans-serif;
+  border-right: 0.1rem solid grey;
+  border-bottom: 0.1rem solid grey;
+  margin: 5px;
+  background-color: white;
+}
+
+.savings-deposit-btn {
+  font-family: 'Quicksand', sans-serif;
+  border-right: 0.1rem solid grey;
+  border-bottom: 0.1rem solid grey;
+  margin: 5px;
+  background-color: white;
+}
