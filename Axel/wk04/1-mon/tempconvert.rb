@@ -1,9 +1,12 @@
 require'pry'
 
-puts 'tempreature value'
+puts 'tempreature value or quit'
 starting_temp = {
 'temp_value' => gets.chomp.downcase
 }
+if starting_temp['temp_value'] == 'quit'
+  exit
+end
 puts 'tempreature unit either f, c or k '
 temp_unit = gets.chomp.downcase
 
