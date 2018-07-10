@@ -26,21 +26,25 @@ ninja_turtle = {
   radical: true
 }
 
-ninja_turtle[:age] = 55
+# ninja_turtle[:age] = 55
 
-ninja_turtle.delete(:radical)
+# ninja_turtle.delete(:radical)
 
-ninja_turtle[:pizza_toppings] = ['cheese', 'pepperoni', 'peppers']
+# ninja_turtle[:pizza_toppings] = ['cheese', 'pepperoni', 'peppers']
 
-ninja_turtle[:pizza_toppings][0]
+# ninja_turtle[:pizza_toppings][0]
 
-ninja_turtle.keys
+# ninja_turtle.keys
 
-# not sure if good enough, still prints toppings as an array, tried to_s and join, neither worked because other keys have string values
 
 ninja_turtle.each do |turtle_things, turtle_value|
-  p "#{turtle_things} #{turtle_value}"
+  if turtle_value == ninja_turtle[:pizza_toppings]
+  puts "#{turtle_things} #{turtle_value.join(' ')}"
+  else
+  puts "#{turtle_things} #{turtle_value}"
+  end
 end
+
 
 
 binding.pry   
