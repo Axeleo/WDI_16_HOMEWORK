@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sinatra Stock Ticker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stock-display">
+    <h2>Display</h2>
+    <h2><%= @stock.company_name %></h2>
+    <h3><%= @stock.symbol %></h3>
+    <ul>
+      <li>Latest Price: <%= @stock.latest_price %></li>
+      <li>Sector: <%= @stock.sector %></li>
+      <li>Change: <%= @stock.change %></li>
+      <li>Average Total Volume: <%= @stock.avg_total_volume%></li>
+      <li><%= Time.now %></li>
+    </ul>
+  </div>
+</body>
+</html>

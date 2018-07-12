@@ -65,4 +65,10 @@ users = {
 
 # array = array.sort.uniq
 
+# OR 
+
+# users.value.map do |hash|
+#   hash[:favourtie_numbers]
+# end.flattern.sort.uniq
+
 binding.pry

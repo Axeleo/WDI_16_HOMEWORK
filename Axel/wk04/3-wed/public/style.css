@@ -1,0 +1,28 @@
+<style>@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC');
+</style>
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Playfair Display SC',
+  serif;
+}
+
+body {
+  background-color: mistyrose;
+}
+
+.stock-display {
+  background-color: papayawhip;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1.0em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  padding: none
+} 
