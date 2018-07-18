@@ -5,6 +5,26 @@
   box-sizing: border-box;
 }
 
+header {
+  background-color: lightblue;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  padding: 1.2em;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  background-color: sandybrown;
+}
+
+
 h1 {
   font-family: 'Bungee',
   cursive;
@@ -27,3 +47,7 @@ body {
   sans-serif;
 }
 
+a { 
+  text-decoration: none;
+  color: darkblue;
+}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie db</title>
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+</head>
+<body>
+  <header>
+    <h1><a href="/">Jaws db</a></h1>
+    <form action="/search">
+      <input type="text" placeholder="search movie titles" name="search_term">
+      <button>Search</button>
+    </form>
+  </header>
+  <main>
+  
+    <%= yield %>
+  
+  </main>
+
+  <footer>Made by Axel Debenham-Lendon @ GA 2018</footer>
+</body>
+</html>
