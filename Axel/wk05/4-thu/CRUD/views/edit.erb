@@ -1,0 +1,8 @@
+<h1>Edit your terrain</h1>
+
+<form action="/terrain/<%=@terrain.id%>" method="post">
+<input type="hidden" name='_method' value='put'>
+<label for="">Image</label>
+<input type="text" name="image_url" value="<%= @terrain.image_url%>">
+
+</form>

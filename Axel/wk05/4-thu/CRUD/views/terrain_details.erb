@@ -1,0 +1,17 @@
+<h1><%= @terrain.name %></h1>
+
+<p>Welcome to the ...</p>
+
+<img src="<%= @terrain.image_url %>" alt="">
+<form action="/terrain/<%= @terrain.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>DESTROY</button>
+</form>
+
+<a href="/terrain/<%= @terrain.id %>/edit">edit</a>
+
+
+
+<% @comments.each do |comment|  %>
+<p><%= comment['content']  %></p>
+<% end %>

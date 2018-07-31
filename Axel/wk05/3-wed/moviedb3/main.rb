@@ -33,7 +33,7 @@ end
 
 get '/' do
   erb :index
-end
+end 
 
 get '/search' do 
 
@@ -53,23 +53,13 @@ get '/movie/:movie_title' do
   unless movie.ntuples > 0 
 
   response = HTTParty.get("http://omdbapi.com/?t=#{params[:movie_title]}&apikey=2f6435d9")
-  
-  fetched_title = response['Title']
-  fetched_director = response['Director']
-  fetched_metascore = response['Metascore']
-  fetched_actors = response['Actors']
-  fetched_genre = response['Genre']
-  fetched_poster = response['Poster']
-  fetched_released = response['Released']
-  fetched_plot = response['Plot']
-
-  prepare_sql('Create movie', "INSERT INTO movies (title, director, metascore, actors, genre, poster, released, plot) VALUES ($1, $2, $3, $4, $5, $6, $7, $8);", [fetched_title, fetched_director, fetched_metascore, fetched_actors, fetched_genre, fetched_poster, fetched_released, fetched_plot])
+    
+  prepare_sql('Create movie', "INSERT INTO movies (title, director, metascore, actors, genre, poster, released, plot) VALUES ($1, $2, $3, $4, $5, $6, $7, $8);", [response['Title'], response['Director'], response['Metascore'], response['Actors'], response['Genre'], response['Poster'], response['Released'], response['Plot']])
   end
   
   from_db = select_movie(params[:movie_title])
   @movie = from_db.first
   # binding.pry
-  end
   erb :movie
 end
 
