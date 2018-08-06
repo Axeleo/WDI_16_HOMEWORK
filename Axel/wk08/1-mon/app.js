@@ -6,3 +6,8 @@ $("form").submit(function () {
   event.preventDefault()
   brushBox[0].style.backgroundColor = setColor
 })
+
+
+$(".wrapper").click(ev => {
+  event.target.style.backgroundColor = 'green'
+})
