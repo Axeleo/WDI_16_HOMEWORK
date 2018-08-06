@@ -1,0 +1,16 @@
+*{
+  box-sizing: border-box;
+}
+
+.square {
+  height: 20px;
+  width: 20px;
+  border: 1px solid lightslategrey;
+}
+
+
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
