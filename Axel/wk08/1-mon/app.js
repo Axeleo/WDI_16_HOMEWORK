@@ -9,5 +9,5 @@ $("form").submit(function () {
 
 
 $(".wrapper").click(ev => {
-  event.target.style.backgroundColor = 'green'
+  event.target.style.backgroundColor = brushBox[0].style.backgroundColor
 })
