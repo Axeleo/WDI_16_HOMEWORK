@@ -8,6 +8,6 @@ $("form").submit(function () {
 })
 
 
-$(".wrapper").click(ev => {
+$(".wrapper").mouseover(ev => {
   event.target.style.backgroundColor = brushBox[0].style.backgroundColor
 })
