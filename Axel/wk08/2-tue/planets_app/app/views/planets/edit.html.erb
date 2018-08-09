@@ -1,0 +1,9 @@
+<form action="/planets/<%= @planet.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="text" name="name" value="<%= @planet.name %>">
+  <input type="text" name="img_url" value="<%= @planet.img_url %>">
+  <input type="text" name="distance_from_sun" value="<%= @planet.distance_from_sun %>">  
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <button>Update</button>
+
+</form>

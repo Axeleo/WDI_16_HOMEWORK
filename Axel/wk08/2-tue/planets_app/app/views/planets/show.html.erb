@@ -1,0 +1,14 @@
+
+<h1><%= @planet.name %></h1>
+
+<img src="<%= @planet.img_url %>" alt="">
+
+<p><%= @planet.name %> is <%= @planet.distance_from_sun %> far from the Sun</p>
+
+<form action="/planets/<%= @planet.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <button>DELETE</button>
+</form>
+
+<a href="/planets/<%= @planet.id %>/edit">EDIT</a>

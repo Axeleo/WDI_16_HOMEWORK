@@ -1,0 +1,15 @@
+
+<form action="/planets" method="post">
+  <input type="text" name="name" placeholder="Name">
+  <input type="text" name="img_url" placeholder="img URL">
+  <input type="text" name="distance_from_sun" placeholder="distance from sun">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <button>CREATE</button>
+</form>
+
+
+<% @planets.each do |planet|  %>
+
+<a href="planets/<%= planet.id %>"><img src="<%= planet.img_url %>" alt=""></a>
+
+<% end %>
